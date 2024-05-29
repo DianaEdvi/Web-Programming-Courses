@@ -1,0 +1,20 @@
+How does the internet work? 
+
+Everything is basically wired. Your computer is a client that connects to a server, which runs 24/7. Your computer or devices connect to your router (Ethernet or Wifi), which is then connected to your ISP (internet server provider), which then is connected to the DNS (Domain name server), which holds all the domain names for websites. It then accesses the IP address of the website you want and traverses through the internet backbone (other networks and data centers) until it finds the server holding the IP address (and the files) for the website and it gets you all the files you want (HTML, CSS, JS, images, etc). It sends it all back the way it came until it reaches your device. Your browser then takes the files and assembles them into a website. It does this every time you update your browser (change domain, click button, etc). 
+
+How do websites work? 
+Made up of HTML, CSS, and JS.
+
+HTML: 
+Responsible for the content in the website. Like the bricks of a house. The raw materials. Contains the text, buttons, links. 
+
+CSS: 
+Responsible for styling your website. Like the color of the walls in the house. What color will the background be, or will the buttons have rounded corners. 
+
+JS: 
+Responsible for allowing the website to have functionality. Like having lightbulbs, or a stove. It turns a static website into something that a user can actually interact with, like send an email or post a blog. 
+
+Ex: Google Homepage 
+HTML: The Google image, the two buttons, and the text box
+CSS: Centers everything, makes the shapes nices 
+JS: Allows you to type in a search term 
