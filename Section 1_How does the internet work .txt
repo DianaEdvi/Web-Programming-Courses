@@ -18,3 +18,4 @@ Ex: Google Homepage
 HTML: The Google image, the two buttons, and the text box
 CSS: Centers everything, makes the shapes nices 
 JS: Allows you to type in a search term 
+
