@@ -1,3 +1,6 @@
+#Ignore entire .idea directory
+.idea/
+
 # Default ignored files
 /shelf/
 /2.4 Movie Ranking Project/.idea/workspace.xml
