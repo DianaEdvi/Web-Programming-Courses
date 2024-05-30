@@ -1,1 +1,33 @@
 Introduciton to HTML
+
+What is HTML
+HyperTextMarkupLanguage
+You can create a website with just HTML files.
+
+HyperText: Text that can link to other documents (Hyper links)
+MarkupLanguage: Pieces of text that tells you what to do with the text. HTML tags.
+	Ex: Headings, body, etc	 
+
+Tag vs element 
+Tag: <h1>
+Element: <h1>Hello World<\h1>
+
+Not good practice to have more than 1 h1
+Also not good practice to skip a heading level (h1 -> h3)
+
+The Paragraph Element
+Tag: <p1><\p1>
+
+Void Elements 
+Non void: paragraph, heading, etc. Not void bcs they have content in them. 
+Void: forbidden from putting content inside the tag.
+
+Ex: Horizontal rule element: <hr /> (draws a line) 
+Ex: Break element: <br /> (line break)
+
+Do's and Dont's: 
+Don't use break lines to start a new paragraph. Use a new paragraph element. 
+Use break element only when you want to separate lines in a single paragraph (like a poem or an address)
+
+Note: You could write <hr> or <br> instead of with the slashes. Recommended to still use the slashes for easier readability. 
+ 
