@@ -1,0 +1,13 @@
+Section 3_Intermediate HTML
+
+Unordered List (bullet points)
+<ul>
+  <li>Milk</li>
+</ul>
+
+Ordered List (numbered)
+<ol>
+  <li>Milk</li>
+</ol>
+
+You can nest lists inside one another. Just create a new unordered or ordered list within the first list. 

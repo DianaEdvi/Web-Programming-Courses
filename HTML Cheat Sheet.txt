@@ -1,0 +1,8 @@
+HTML Cheat Sheet
+Heading: <h1></h1>
+Paragraph: <p1></p1>
+Horizontal rule: <hr>
+Break: <br>
+Unordered List: <ul></ul>
+Ordered List: <ol></ol>
+List element: <li></li>
