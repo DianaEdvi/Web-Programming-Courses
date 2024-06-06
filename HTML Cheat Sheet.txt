@@ -6,3 +6,6 @@ Break: <br>
 Unordered List: <ul></ul>
 Ordered List: <ol></ol>
 List element: <li></li>
+Anchor element: <a tag attribute=value>Content</a>
+Global attribute: <a draggable=true>This is a link</a>
+Image Element: <img src="url/size" alt "image name"/>

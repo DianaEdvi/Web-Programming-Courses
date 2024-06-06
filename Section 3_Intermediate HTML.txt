@@ -11,3 +11,18 @@ Ordered List (numbered)
 </ol>
 
 You can nest lists inside one another. Just create a new unordered or ordered list within the first list. 
+
+Anchor Element (used to create hyperlinks)
+<tag attribute=value>Content</tag>
+<a href="http://www.google.com">This is a link</a>
+
+Can have multiple attributes, just separate them by a space
+
+Global attributes are attributes that are common to all HTML elements 
+Ex: Draggable (t/f)
+
+How to apply a global atttibute:
+<a draggable=true>This is a link</a>
+
+The Image Element (void)
+<img src="url/size" alt "image name"/>
