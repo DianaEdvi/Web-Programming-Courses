@@ -1,1 +1,50 @@
 Section 4_Multi-Pagg Websites
+
+Absolute file path: 
+Path that is relative to the root of the computer (drive). 
+Ex: 
+C:/Project/Images/cat.png
+
+Relative file path: 
+Write the file path relative to where we are writing our code
+
+.. = go up a level 
+es: ../essay.docx (goes up a directory and finds essay
+. = look in the current directory 
+
+Web pages
+It is a link, but the content is the relative path to the webpage 
+<a href="this/is/a/path.html"><Link name</a>
+
+You can also put images as the link
+
+<a href="this/is/a/path"<img src="/path/to/image" alt="image name"></a>
+
+The Boiler Plate 
+
+<!DOCTYPE html> 							   (tells the browser that the file is html 5)
+<html lang="en"> 							   (root of the document, and language of document for the page readers who can't see)
+  <head> 								   (info abt the site not shown to the user)
+    <meta charset="UTF-8"> 						   (character set encoding of the webpage)
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> (how the website should be dosplayed based on your screen)
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 		   (keeps your code compatible with Internet Explorer, not necessary)
+    <title>HTML 5 Boilerplate</title> 					   (what gets displayed in the tab bar)
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body> 								   (where the content of the website goes)
+	<script src="index.js"></script>
+  </body>
+</html>
+
+
+Hosting a website
+Webhosting allows your site to be seen from anywhere on the internet. 
+You need to put all the files needed for the website onto a web server. 
+The web server is connected to the internet, ready 24/7. 
+This process is called webhosting. 
+
+
+
+
+
+
