@@ -99,6 +99,32 @@ Universal Selector (*)
 It means select all. 
 
 
+Color properties 
+You can use hex codes instead of color names
+
+Font properties: 
+Font size: 20px or 20pt (point) 
+Other units: 
+pt: point
+em: em. One em is the full width of an m. Based off the parent size (relative). 1em is going to be 100% of the parent font. 2em is 200% the size of the parent font. 
+rem: Relative to the root of the html file. More consisntent than em. 
+
+Font weight
+normal bold: keywords
+lighter/bolder: relative to parent 
+number: 100-900
+
+Font family
+font-family: Helvetica, sans-serif 
+font-family: "Times New Roman", serif
+The second property is the backup font in case the first doesnt work. Serif has the little feet on the botton of each letter. 
+
+Text alignment 
+text-align: center/left/right/start/end
+
+
+
+
 
 
 

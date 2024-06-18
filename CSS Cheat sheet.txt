@@ -7,5 +7,6 @@ Class selector: .red-heading{color: red;} // <h2 class="red-text">Red</h2>
 ID selector: #main {color: red} // <h2 id="main">Red</h2>
 Attribute selector: p[draggable]{color: red} OR p[draggable="false"]{color: red}
 Universal selector: *{color: red}
+Some properties: color, background-color, font-size, font-family, font-weight, text-align
 
 
