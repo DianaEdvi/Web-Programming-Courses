@@ -8,5 +8,6 @@ ID selector: #main {color: red} // <h2 id="main">Red</h2>
 Attribute selector: p[draggable]{color: red} OR p[draggable="false"]{color: red}
 Universal selector: *{color: red}
 Some properties: color, background-color, font-size, font-family, font-weight, text-align
+Center a div: margin: 25% width 50% (make sure any images are width: 100%) 
 
 

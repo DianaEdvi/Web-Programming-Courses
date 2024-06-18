@@ -23,3 +23,22 @@ The second property is the backup font in case the first doesnt work. Serif has 
 Text alignment 
 text-align: center/left/right/start/end
 
+The CSS Box Model
+Margin, padding, border 
+Width and height can be lables from px or %
+
+Border: Can take 3 values, thickness style color. Does not change the size of the html element itself. 
+border: 10px solid black
+Other modifications: 
+border-top: 0px (goes under the first line)
+border-width: toppx rightpx bottompx leftpx // or if you give 2 values, its top/bottompx left/rightpx
+
+Padding: Pushes the border out. Creates space between the html element and the border. The original element's size does not change. 
+padding: 20px
+
+Margin: outside of the border. It's like a padding between elements. 
+margin: 10px 
+
+Content Division Element (html element)
+<div>Content</div>
+
