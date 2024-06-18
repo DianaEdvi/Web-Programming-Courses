@@ -1,0 +1,5 @@
+CSS Cheat sheet
+Inline: <html style="background:blue"></html>
+Internal: <style><html>{background: red}</style>
+External: <link rel ="stylesheet" href="./styles.css" />
+

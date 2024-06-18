@@ -1,0 +1,46 @@
+Section 5_Introduction to CSS
+
+Cascading Style Sheets 
+
+Style Sheet is a type of language. Allows us to specify how things should look. 
+Other style sheets include SASS (Syntactically Awesome Style Sheet) and Less (Leaner CSS). 
+
+3 ways to add CSS to your files 
+
+Inline
+<tag stylep="css" />
+<html style="background:blue"></html>
+background = property 
+blue = value 
+Useful for styling a single element on your page
+
+Internal
+<style>css</style>
+<style>
+	html{
+	background: red;
+	}
+</style>
+
+Applies to anything in the document. You need a selector (between curly braces)
+Useful for only one  HTML document. 
+
+External 
+<link href = "style.css"/>
+
+<link
+rel ="stylesheet" (relationship aka role)
+href="./styles.css" (location)
+/>
+
+#CSS file: styles.css 
+<html>{
+	background: green
+	}
+
+Much more versatile and most common. 
+
+You can specify which elements you want which color. Ex instead of all html elements, you can write h1 for all h1's to be green
+
+
+ 
