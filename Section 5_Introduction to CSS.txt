@@ -42,5 +42,65 @@ Much more versatile and most common.
 
 You can specify which elements you want which color. Ex instead of all html elements, you can write h1 for all h1's to be green
 
+CSS Selectors 
+Element Selector
+h1{
+	color: blue
+}
+
+The selector is the h1. Called an element selector. It selects a particular HTML tag. It applies to all elements that have that tag. 
+
+Class selector 
+.red-heading{
+	color: red;
+}
+The red-heading is called a class. A class is something that we can add as an attribute to any HTML element
+HTML: 
+<h2 class="red-text">Red</h2>
+
+CSS: 
+.red-text{
+	color: red'
+}
+
+Spelling is important.  
+
+ID selector (#)
+#main {
+	color: red	
+}
+Selects all elements with a particular ID attribute. 
+<h2 id="main">Red</h2>
+
+CSS: 
+#main{
+	color: red
+}
+
+Difference between Class Selector and ID selector? 
+Class can be applied to many elements. The ID should only be applied to one element in a single HTML file. 
+
+Attribute Selector 
+You can select elements with particular attributes to modify. 
+p[draggable]{
+	color: red
+}
+This selects all paragraph elements with the attribute draggable. 
+You can even select the value of the attribute. (ex true or false)
+p[draggable="false"]{
+	color: red
+}
+
+Universal Selector (*)
+*{
+	color: red
+}
+
+It means select all. 
+
+
+
+
+
 
  

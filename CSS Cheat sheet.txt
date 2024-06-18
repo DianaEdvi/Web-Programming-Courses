@@ -2,4 +2,10 @@ CSS Cheat sheet
 Inline: <html style="background:blue"></html>
 Internal: <style><html>{background: red}</style>
 External: <link rel ="stylesheet" href="./styles.css" />
+Element selector: h1{color: blue}
+Class selector: .red-heading{color: red;} // <h2 class="red-text">Red</h2>
+ID selector: #main {color: red} // <h2 id="main">Red</h2>
+Attribute selector: p[draggable]{color: red} OR p[draggable="false"]{color: red}
+Universal selector: *{color: red}
+
 
