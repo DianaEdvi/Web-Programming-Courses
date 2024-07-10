@@ -9,5 +9,27 @@ Attribute selector: p[draggable]{color: red} OR p[draggable="false"]{color: red}
 Universal selector: *{color: red}
 Some properties: color, background-color, font-size, font-family, font-weight, text-align
 Center a div: margin: 25% width 50% (make sure any images are width: 100%) 
+Cascade: 
+Position: Is a rule in a higher or lower position in the code? 
+li {
+color: red;
+color: blue;
+}
+Output = blue 
+
+Specificity: How specific a selector is in terms of the elements
+Element selector (ex li)
+Class selector (ex .class)
+Attribute (ex [draggable]) 
+Id (ex #first-id
+
+Type: External, internal, in-line 
+External
+Internal
+Inline 
+
+Importance: Keyword that you can add to force importance 
+color: red;
+color: green !important;
 
 
