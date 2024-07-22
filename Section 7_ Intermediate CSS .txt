@@ -1,0 +1,103 @@
+Section 7_ Intermediate CSS 
+
+Cascade: The hierarchy, the order in which css rules get applied 
+
+4 categories for prioritizing rules: 
+
+The more specific, the higher the priority (the lower, the more specific)
+
+These 4 categories are also prioritized in this order. 
+
+
+Position: Is a rule in a higher or lower position in the code? 
+Ex: 
+li {
+color: red;
+color: blue;
+}
+Output = blue 
+
+Specificity: How specific a selector is in terms of the elements
+Element selector (ex li)
+Class selector (ex .class)
+Attribute (ex [draggable]) 
+Id (ex #first-id
+
+Type: External, internal, in-line 
+External
+Internal
+Inline 
+
+Importance: Keyword that you can add to force importance 
+color: red;
+color: green !important;
+
+Combining CSS Selectors
+You can select certain elements that are within a div by selecting the class of the div and noting the element within that div that you want to modify
+
+<div class="box inner-box">
+	<p>White text</p>
+</div>
+
+.inner-box p {
+ color: white;
+}
+
+This selects all the paragraph elements within the divs with the class inner-box
+
+Combining rules: 
+
+Group: Applies to both selectors
+selector, selector {
+color: blueviolet
+}
+
+Child: First is the parent, the second is the child 
+Only one generation deep. 
+
+selector > selector {
+color: firebrick
+}
+
+Descendent: ancestor and descendent
+Can be multiple generations 
+
+selector selector {
+color: blue;
+}
+
+Chaining: apply where all selectors are true 
+You basically add all the attributes that make up an element to be as specific as you want
+Always start with the element, then go to class, id, etc
+
+selectorselector {
+color: seagreen;
+}
+
+Combining combiners 
+selector selectorselector {
+font-size: 0.5rem;
+}
+
+CSS Positioning 
+
+Static: 
+The html default 
+Each item goes one after another 
+
+Relative: 
+Position relative to its default position
+
+Absolute: 
+Position relative to the nearest positioned ancestor or top left corner of the webpage
+z-index: determines which elements go on top of which in the z axis 
+Everything has a default z-index of 0
+Also, when you set it to absolute, the element is placed on a different layer than everything else 
+**Important note: Make sure to set the parent to relative**
+
+Fixed: 
+Position relative to top left corner of the browser window 
+(good for UI if you want to make a quick game)
+
+
+
