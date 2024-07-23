@@ -9,6 +9,7 @@ Attribute selector: p[draggable]{color: red} OR p[draggable="false"]{color: red}
 Universal selector: *{color: red}
 Some properties: color, background-color, font-size, font-family, font-weight, text-align
 Center a div: margin: 25% width 50% (make sure any images are width: 100%) 
+
 Cascade: 
 Position: Is a rule in a higher or lower position in the code? 
 li {
@@ -31,5 +32,67 @@ Inline
 Importance: Keyword that you can add to force importance 
 color: red;
 color: green !important;
+
+Combining Selectors
+Group: Applies to both selectors
+selector, selector {
+color: blueviolet
+}
+
+Child: First is the parent, the second is the child 
+Only one generation deep. 
+
+selector > selector {
+color: firebrick
+}
+
+Descendent: ancestor and descendent
+Can be multiple generations 
+
+selector selector {
+color: blue;
+}
+
+Chaining: apply where all selectors are true 
+You basically add all the attributes that make up an element to be as specific as you want
+Always start with the element, then go to class, id, etc
+
+selectorselector {
+color: seagreen;
+}
+
+Combining combiners 
+selector selectorselector {
+font-size: 0.5rem;
+}
+
+CSS Positioning 
+
+Static: 
+The html default 
+Each item goes one after another 
+
+Relative: 
+Position relative to its default position
+
+Absolute: 
+Position relative to the nearest positioned ancestor or top left corner of the webpage
+**Important note: Make sure to set the parent to relative**
+
+Fixed: 
+Position relative to top left corner of the browser window 
+
+Display
+display : block 
+display: inline 
+display: inline-block 
+display: none 
+
+float: left (makes an element float left, others will wrap around it)
+clear: left (or right, or both, clears any float responsibilities)
+
+
+
+
 
 

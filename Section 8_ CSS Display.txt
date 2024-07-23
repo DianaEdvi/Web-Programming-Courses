@@ -1,0 +1,90 @@
+Section 8_ CSS Display
+
+display : block (default, stretches to the length of the page)
+display: inline (makes elements line one after another horizontally until you run out of space. Cannot change the size) 
+display: inline-block (The block allows you to set the h/w, and the inline allows you to have elements on the same line)
+display: none (makes any element physically disappear)
+
+Float 
+Wrap text around a particular element
+
+img {
+float: left
+}
+
+Make the image float to the left, and the text will wrap around it on the right
+
+Clear: 
+Clears the responsibilities of wrapping
+
+footer {
+clear: left;
+}
+
+This clears a footer from say having the float left. 
+
+Responsive Websites
+
+Media Queries
+- Put in instead of a selector 
+- @media (max-width: 600px) {
+/* CSS for screens below or equal to 600px wide */
+}
+
+CSS Grid
+- Create a div that contains all your blocks, then mark its display as grid
+<div class="grid-container">
+<divs...>
+</div>
+
+.grid container {
+display: grid
+grid-template-columns: 1fr 1fr;(creates 2 equal sized columns, fr stands for fraction)
+grid-template-rows: 100px 200px 200px; (creates 3 rows, with different sizes)
+gap: 30px; (gap between rows and columns)
+}
+
+.first {
+grid-column: span 2 (makes a div with the class first span 2 columns)
+}
+
+
+CSS Flexbox 
+- Good for horizontal or vertical layouts 
+- Make the parent a container, and use display: flex
+- Flex of 1 makes all the cards equal in width. 2 doubles it. 0.5 halves it.  
+.flex-container{
+display: flex
+}
+.first{
+flex: 2
+}
+
+External Frameworks (Bootstrap) 
+- Predefined classes in their CSS and they put different rules for different selectors
+- It is built on flexbox 
+- Uses a 12 box layout 
+
+
+Media Queiry: Deep Dive 
+@media (max-width: 600px){ (Anything below this width should use one type of CSS
+)
+h1 {
+font-size: 15px;
+}
+ 
+@media (min-width: 600px) { (Same but min)
+h1 {
+font-size: 15px;
+}
+}
+
+Combined 
+@media (min-width: 600px) and (max-width: 900px) { (Window within this size will have a specific layout, can also do it convex)
+}
+
+@media screen(orientation: landscape){
+}
+Screen vs print (screen is unnecessary bcs its default, print is for if you want to print the site)
+
+

@@ -9,3 +9,6 @@ List element: <li></li>
 Anchor element: <a tag attribute=value>Content</a>
 Global attribute: <a draggable=true>This is a link</a>
 Image Element: <img src="url/size" alt "image name"/>
+Webpage: <a href="this/is/a/path.html"><Link name</a>
+Webpage with image: <a href="this/is/a/path"<img src="/path/to/image" alt="image name"></a>
+Boilerplate intellij: html:5 + Enter
