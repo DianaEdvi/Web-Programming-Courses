@@ -1,0 +1,51 @@
+Section 9_Flexbox 
+
+display: flex is different from all the other display properties. Think of it as a separate entity. 
+
+Flexbox nullifies all the previous display properties and puts all content on one line. 
+display: flex properties
+gap
+
+display inline-flex: The flexbox itself is inline. The content will match the width of text. 
+
+the default flex-direction is flex-direction: row. Sets the main axis to horizontal, left to right. The cross axis goes from top to bottom. 
+flex-direction: column. The main axis is not top to bottom and the cross axis is left to right. 
+flex-basis: sets the height OR width of each item (expands the main axis, depending) 
+
+Flex-basis needs to go on the child element, not the parent, like flex or gap 
+
+Flexible layout 
+Will the property go on the child or the parent? 
+order: 0 (child) By default everything has the order of 0 and the order is from the html. 
+
+flex-wrap (parent) deals with the overflow of content 
+flex-wrap: nowrap; by default if its too long it will get pushed off the page
+flex-wrap: wrap; all the lements that dont fit on the page will then wrap around
+flex-wrap: wrap-reverse; same as regular wrap, but from the bottom right
+
+justify-content (parent) sets the distribution along the main axis
+justify-content: flex-start; everything justifies to the left
+justify-content: flex-end; everything justifies to the right
+justify-content: center; everything centers
+justify-content: space-between; uses up all the space allocated (first and last stuck to the edges of container)
+justify-content: space-around; uses up all the space allocated (the space between the edge items adds up to a normal gap)
+justify-content: space-evenly; uses up all the space allocated (all items evenly gapped)
+
+align-items (parent): sets the distribution along the cross axis
+Need to set the height of the container, or it will be the height of the items
+height: 70vh; viewport height (70%)
+align-items: flex-start; aligns items to the top
+align-items: flex-end; aligns items to the bottom
+align-items: center; centers items
+align-items: baseline; makes height the height of the items
+align-items: stretch; sets vh to 100
+
+align-self (child): the same as align-items but for individual items (good for unique positions of an item)
+
+align-content (parent): similar to align-items, but only works when flex-wrap is set to wrap
+
+there are other properties, check the CSS cheat sheet (the online one)
+
+
+
+
