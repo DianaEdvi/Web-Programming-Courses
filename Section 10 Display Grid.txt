@@ -1,0 +1,37 @@
+Section 10 Display: Grid
+
+Difference between Flex and Grid 
+Flex: Aligns content along a 1 dimensional line 
+Grid: Tool for laying out content on a 2D grid
+
+Why bother with flex?
+Most devs use a combo of them both
+
+You can have a grid and within the grid is a flex, or vice versa. 
+
+When shrinking, grid will automatically try and make a grid. They will line up. Flex will not, it prioritizes whatever spacing you wanted. 
+
+
+display: grid;
+grid-template-columns: 1fr 2fr; (fr stands for fraction)
+grid-template-rows: 1fr 1fr; 
+gap: 10px; 
+
+grid-template: 100px 200px / 400px 800px (shorthand rows-columns) 
+grid-template-rows: 100px auto; (tries to fit 100% of the space) 
+
+Sizing 
+
+Fractional sizing
+grid-template-rows: 1fr 2fr;
+
+Minmax
+grid-template-columns: 200px minmax(400px, 800px) (sets limit on the second column)
+
+Repeat function:
+grid-column-rows: repeat(2,100px)
+
+Items are sorted left to right, top to bottom. 
+If not enough rows/columns, it will fit the height to the height of the content and the width to the column height
+
+grid-auto-rows: 300px; sets row height to automatic 300px
