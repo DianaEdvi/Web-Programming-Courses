@@ -47,5 +47,27 @@ align-content (parent): similar to align-items, but only works when flex-wrap is
 there are other properties, check the CSS cheat sheet (the online one)
 
 
+Flex sizing 
+Flexbox default usually shrinks along with the window, but there are some customizations we can do. 
+Priority list:
 
+Content width (words)< width (px's)< flex-basis (width main axis)< min-width (aka longest word)/max-width (longest line of text) (max first)
+
+Four ways of sizing: 
+1. Flex container, shrinks the box to the length of the longest word, which will become the minimum width. Then it gets pushed off if shrunk more. 
+Flex items: you set the width of the box manually, then the flexbox will try and respect the width input. It becomes the minimum width instead if its pushed too far. 
+
+Max width, min width can be manually set. Flexbox prioritizes the min-max width over flex-basis
+
+Flex grow and shrink 
+0 means off
+1 is on
+Very logical tbh, it can only grow or shrink if its on. Otherwise it will stay its default value 
+Auto gives more width to boxes with more content, less for less 
+Shorthand: 
+flex: 1 1 0 (grow shrink grow)
+Shorthand 2: 
+flex: 1 (aka grow 1 shrink 1 auto 0)
+
+flex 1/2/3 are all abt the ratios compared to one another
 

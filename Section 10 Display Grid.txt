@@ -35,3 +35,22 @@ Items are sorted left to right, top to bottom.
 If not enough rows/columns, it will fit the height to the height of the content and the width to the column height
 
 grid-auto-rows: 300px; sets row height to automatic 300px
+
+
+Grid item placement
+
+Items are in a div. This div is called the grid container. 
+The items are called grid items.
+Rows & Columns are called tracks 
+Within the intersection of the tracks, are grid cells
+Multiple cells can make a grid item
+Lines that separate tracks are the grid lines. Can control these with gap. Nothing else. 
+
+grid-column: span 2; 
+
+grid-area: 2/1/3/3 (row-start, column-start, row-end, column-end)
+
+
+
+
+

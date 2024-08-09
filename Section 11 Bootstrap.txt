@@ -1,0 +1,13 @@
+Section 11 Bootstrap
+
+An external CSS framework 
+Contains pre-built CSS files that you can use 
+You just add the classes you want to the elements you want to alter. 
+
+Downside: class bloat. You add styling into html which looks unclean. 
+Downside: customization. You'd have to dig into the framework code to modify them. 
+
+Include via a CDN link (Content Delivery Network)
+
+Head: <link href="link">... make sure this is above any styles.css files bcs then you can override. 
+Body: >script src="link"... for functionality
