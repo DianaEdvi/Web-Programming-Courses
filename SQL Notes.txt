@@ -1,0 +1,202 @@
+SQL Notes
+
+Cols are called 'fields'
+Rows are called 'records'
+
+
+
+---- Creating, Selecting, Updating ----
+
+SELECT * FROM 'table_name'; <- Select all
+SELECT column1, column2, ... FROM 'table_name' WHERE condition;
+
+WHERE country='Mexico'; <- example
+
+SELECT * FROM table_name 
+ORDER BY condition 
+
+CREATE TABLE table_name (
+	column1 DATATYPE NOT NULL, <- NOT NULL is optional but good practice
+	column2 DATATYPE
+	...
+	PRIMARY KEY (column) <- Unique, not NULL, immutable 
+)
+
+INSERT INTO table_name (column1, column2, column3, ...) <- if adding for all cols, no need to specify args
+VALUES (values1, values2, values3, ...) 
+
+UPDATE table_name
+SET column1 = value1, colume2 = value2, ...
+WHERE condition; <- IMPORTANT! Set which records to change (ex id)
+
+Foreign key is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table
+
+CREATE TABLE table_name (
+	column1 DATATYPE NOT NULL, <- NOT NULL is optional but good practice
+	column2 DATATYPE
+	...
+	PRIMARY KEY (column), <- Unique, not NULL, immutable 
+	FOREIGN KEY (column) REFERENCES  table_name(parent_column);
+)
+
+Inner join is the overlap like in a venn diagram
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2 ON table1.column_name = table2.column_name <- aka foreign key = primary key 
+
+
+
+---- PostgreSQL ----
+
+var_name SERIAL PRIMARY KEY <- automatically counts
+var_name VARCHAR(50) <- Limits entry to 50 chars. Reduces size of data block to entry size
+var_name TEXT(size)
+
+TEXT is good:
+
+If you need to store large texts in your database
+If you do not search on the value of the column
+If you select this column rarely and do not join on it.
+
+VARCHAR is good:
+
+If you store little strings
+If you search on the string value
+If you always select it or use it in joins.
+
+WHERE <Column> LIKE <Pattern> <- check for pattern. % is wildcard
+Pattern ex: 'United' || '%' <- Looks for United followed by anything (United%)
+|| means merge 
+
+UNIQUE <- No duplicates
+
+
+
+---- Alter and Delete ----
+
+ALTER TABLE table_name
+	RENAME TO new_name; <- Rename table 
+
+ALTER TABLE table_name
+	ALTER COLUMN column_name TYPE VARCHAR(50); <- Change type 
+
+ALTER TABLE table_name
+	ADD column_name TEXT <- adds a new column/constraint
+
+ALTER TABLE table_name
+	ADD UNIQUE (a, c) <- makes them unique together 
+
+ALTER TABLE table_name
+	ADD column_name DATATYPE;
+
+DROP TABLE table_name <- deletes table 
+
+DROP TABLE IF EXISTS t1_name, t2_name
+
+UPDATE table_name
+	SET column = value,... <- used to delete rows 
+	WHERE condition 
+
+DELETE FROM table_name <- delete data 
+	WHERE condition 
+
+DELETE FROM table_name
+	WHERE condition;
+
+
+
+---- Relationships ---- 
+
+
+--- One-to-one ---
+
+One entry in one table matches to one in another table:
+
+CREATE TABLE student (
+	id SERIAL PRIMARY KEY,
+	first_name TEXT,
+	last_name TEXT
+); 
+
+CREATE TABLE contact_detail (
+	id INTEGER REFERENCES student(id) UNIQUE, <- FK
+	tel TEXT,
+	address TEXT
+); 
+
+
+--- One-to-many ---
+
+One entry matches to many in another table
+Ex one student to many pieces of hw 
+Ex customers to orders 
+Many to one is just the other way around
+
+CREATE TABLE student (
+	id SERIAL PRIMARY KEY,
+	first_name TEXT,
+	last_name TEXT
+); 
+
+CREATE TABLE homework_submission (
+	id SERIAL PRIMARY KEY, <- PK for hw 
+	mark INTEGER,
+	student_id INTEGER REFERENCES student(id)
+); 
+
+
+--- Many-to-many ---
+Ex One student can be taking many classes and each class can take many students 
+Need a third table that links the id's of the two other tables 
+
+CREATE TABLE student (
+	id SERIAL PRIMARY KEY,
+	first_name TEXT,
+	last_name TEXT
+);
+
+CREATE TABLE class (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(45)
+);
+
+CREATE TABLE enrollment (
+  student_id INTEGER REFERENCES student(id),
+  class_id INTEGER REFERENCES class(id),
+  PRIMARY KEY (student_id, class_id) <- ensures each enrollment is unique 
+);
+
+Join 3 tables together (enrollment, student, class)
+
+SELECT *
+FROM enrollment 
+JOIN student ON student.id = enrollment.student_id
+JOIN class ON class.id = enrollment.class_id;
+
+
+
+--- Aliases ---
+
+Aliases: reformat when viewing tables
+Good for many tables with same field name
+
+Ex SELECT student.id AS stud 
+
+Also good for shortening names when writing queries 
+FROM enrollment AS e
+JOIN student AS s ON s.id = e.student_id
+
+Technically, AS is optional. You can leave it out and have the same effect 
+
+
+
+
+
+
+
+
+
+
+
+

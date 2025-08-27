@@ -1,3 +1,5 @@
+.env/
+
 #Ignore entire .idea directory
 .idea/
 
